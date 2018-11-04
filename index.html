@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS e meuCSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/meucss.css">
+    <!-- JavaScript-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/required.js"></script>
+
+
+    <title class="title">Login - Health Track</title>
+</head>
+
+<body>
+    <div class="container-fluid imagem-1-home estilo-fonte">
+        <div class="row ">
+
+            <div class="col-md-4">
+                <h1>Health Track</h1><br>
+                <h2>Bem-vindo(a)!</h2>
+                <p class="lead">Registre-se para acompanhar dados de exercicio, alimentação, pressão arterial e peso.</p>
+                <form action="cadastro.html" class="form-signin">
+                    <button type="submit" id="registrar" class="btn btn-warning btn-block shadow p3 mb-5 rounded text-muted">REGISTRAR</button>
+                </form>
+            </div>
+
+            <div class="col-md-8">
+                <article></article>
+            </div>
+            <div class="col-md-7">
+            </div>
+
+            <div class="col-md-5 centralizado">
+                <!-- Logar -->
+                <label for="cadastro">Já possui um cadastro?</label>
+                <form id="form" class="form-signin">
+                    <div class="form-group">
+                        <input type="text" id="email" class="form-control" placeholder="E-mail">
+                        <span id="emailTxt">Preenchimento de e-mail é obrigatório!</span><br>
+                        <div class="form-group">
+                            <input type="password" id="senha" class="form-control" placeholder="Senha">
+                            <span id="senhaTxt">Preenchimento deste campo obrigatório!</span><br>
+                        </div>
+                    </div>
+                    <!-- Lembrar Usuario -->
+                    <div class="checkbox mb-3">
+                        <label>
+                        <input type="checkbox" name="lembrar" value="lembrar"> Lembrar de mim
+                    </label>
+                        <!-- Link esqueceu a senha -->
+                        <label class="color-text">
+                        <a class="btn color-text4" data-toggle="modal" data-target="#myModal">
+                        Esqueceu a senha?
+                        </a>
+                    </label>
+                        <!-- The Modal Recuperar Senha -->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Recuperar Senha</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form class="form-signin">
+                                            <div class="form-group">
+                                                <input type="text" id="email2" class="form-control" placeholder="Informe o e-mail cadastrado">
+                                            </div>
+                                            <button type="submit" class="btn btn-success" data-dismiss="modal">Recuperar</button>
+                                        </form>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Recuperar Senha -->
+
+                        <!-- Botão entrar -->
+                        <button class="btn btn-warning btn-block shadow p3 mb-5 rounded text-muted" type="submit" id="logar">ENTRAR
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-center text-small color-text">
+            <p class="mb-1">&copy; 2018-2018 Health Track</p>
+        </footer>
+    </div>
+</body>
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</html>

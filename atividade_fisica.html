@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <title>Atividade Física - Health Track</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/meucss.css">
+    <!-- JavaScript-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/formulario-atividade.js"></script>
+    <script src="js/formulario-atividade2.js"></script>
+    <script src="js/required.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+
+            <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+                <!-- Links -->
+                <ul class="navbar-nav ">
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dashboard.html">
+                            INCIO
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                            ALIMENTOS
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="alimentos.html">Alterar dados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                            PESO
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="peso.html">Alterar dados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                            PRESÃO ARTERIAL
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="pressao_arterial.html">Alterar dados</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="jumbotron text-center estilo-fonte">
+        <h1>Atividade Física</h1>
+        <p>Verifique o seu histórico de atividade física, altere ou cadastre uma nova atividade</p>
+    </div>
+
+    <div class="container estilo-fonte">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Histórico</h3>
+                <button type="button" class="btn btn-warning btn-block shadow p3 mb-5 rounded text-muted" data-toggle="modal" data-target="#myModal">
+                    Adicionar nova atividade
+                </button>
+
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Calorias gastas</th>
+                            <th>EDITAR</th>
+                            <th>EXCLUIR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12/06/2018</td>
+                            <td>07:00</td>
+                            <td>Pedalada</td>
+                            <td>30 minutos de pedalada</td>
+                            <td>350 Cal</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-block text-muted" data-toggle="modal" data-target="#myModalEditar">EDITAR
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" title="Excluir atividade">EXCLUIR</button>
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <td>13/06/2018</td>
+                            <td>09:00</td>
+                            <td>Musculação</td>
+                            <td>1 hora de musculação</td>
+                            <td>450 Cal</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-block text-muted" data-toggle="modal" data-target="#myModalEditar">EDITAR
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" title="Excluir atividade">EXCLUIR</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Adicionar atividade</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="form-signin">
+                                <div class="form-group">Data
+                                    <input type="text" id="data" class="form-control" placeholder="Informe a data">
+                                    <span id="dataTxt">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">Hora
+                                    <input type="text" id="hora" class="form-control" placeholder="Informe a hora">
+                                    <span id="horaTxt">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">
+                                    <input list="atividades" name="atividades" placeholder="Informe o tipo">
+                                    <datalist id="atividades">
+                                        <option value="Caminhada">Caminhada</option>
+                                        <option value="Corrida">Corrida</option>
+                                        <option value="Pedalada">Pedalada</option>
+                                        <option value="Musculação">Musculação</option>
+                                    </datalist>
+                                    <span id="atividade">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">Descrição
+                                    <input type="text" id="descricao" class="form-control" placeholder="Descrição">
+                                </div>
+                                <div class="form-group">Calorias
+                                    <input type="txt" id="caloria" class="form-control" placeholder="Informe a quantidade de calorias">
+                                    <span id="caloriaTxt">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+
+                                <button type="submit" class="btn btn-success" id="salvar">SALVAR</button>
+                            </form>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Modal EDITAR -->
+            <div class="modal fade" id="myModalEditar">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Editar Atividade</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="form-signin">
+                                <div class="form-group">Data
+                                    <input type="text" id="data2" class="form-control" placeholder="Informe a data" value="12/03/2018">
+                                    <span id="dataTxt2">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">Hora
+                                    <input type="text" id="hora2" class="form-control" placeholder="Informe a hora">
+                                    <span id="horaTxt2">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">
+                                    <input list="atividades" name="atividades" placeholder="Informe o tipo">
+                                    <datalist id="atividades2">
+                                            <option value="Caminhada">Caminhada</option>
+                                            <option value="Corrida">Corrida</option>
+                                            <option value="Pedalada">Pedalada</option>
+                                            <option value="Musculação">Musculação</option>
+                                        </datalist>
+                                </div>
+                                <div class="form-group">Descrição
+                                    <input type="text" id="descricao2" class="form-control" placeholder="Descrição">
+                                    <span>Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+                                <div class="form-group">Calorias
+                                    <input type="text" id="caloria2" class="form-control" placeholder="Informe a quantidade de calorias" value="200 cal">
+                                    <span id="caloriaTxt2">Preenchimento deste campo é obrigatório!</span><br>
+                                </div>
+
+                                <button type="submit" class="btn btn-success" id="salvar2">SALVAR</button>
+                            </form>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="my-5 pt-5 text-center text-small">
+            <p class="mb-1">&copy; 2018-2018 Health Track</p>
+        </footer>
+
+    </div>
+</body>
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+</html>

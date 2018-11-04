@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS e meuCSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/meucss.css">
+    <!-- JavaScript-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/required.js"></script>
+
+    <title class="title">Dados Usúario - Health Track</title>
+</head>
+
+<body class="bg-light">
+    <div class="row">
+        <div class="col-md-12">
+
+            <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+                <!-- Links -->
+                <ul class="navbar-nav ">
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dashboard.html">
+                                INCIO
+                            </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            ALIMENTO
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="alimentos.html">Alterar dados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                            ATIVIDADE FISÍCA
+                            </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="atividade_fisica.html">Alterar dados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                            PESO
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="peso.html">Alterar dados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                            PRESÃO ARTERIAL
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="pressao_arterial.html">Alterar dados</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="jumbotron text-center estilo-fonte">
+        <h1>Dados do Usúario</h1>
+        <p>Verifique se os seus dados estão corretos, você pode altera-los quando achar necessário.</p>
+    </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column estilo-fonte">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="dados_usuario.html" class="form-signin">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="Nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Informe o nome completo" value="JOSEIR CAVASSANI DA PAZ">
+                            <span id="nomeTxt">Preenchimento deste campo é obrigatório!</span><br>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="data_nascimento">Data de nascimento</label>
+                            <input type="text" class="form-control" id="data_nascimento" placeholder="" value="20/11/1989">
+                            <span id="dataTxt">Preenchimento deste campo é obrigatório!</span><br>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="genero">Gênero</label>
+                            <input type="text" class="form-control" id="genero" placeholder="Informe o gênero" value="Masculino">
+                            <span id="generoTxt">Preenchimento deste campo é obrigatório!</span><br>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="altura">Altura</label>
+                            <input type="text" class="form-control" id="altura" placeholder="" value="1,60">
+                            <span id="alturaTxt">Preenchimento deste campo é obrigatório!</span><br>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email" placeholder="" value="joseir.cavassani@hotmail.com">
+                            <span id="emailTxt">Preenchimento deste campo é obrigatório!</span><br>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="" value="teste.1" disabled>
+                            <span id="senhaTxt">Preenchimento deste campo é obrigatório!</span><br>
+                            <a href="alterar_senha.html" class="btn btn-warning btn-block shadow p3 mb-5 rounded text-muted">Alterar Senha</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="salvar">SALVAR ALTERAÇÕES</button>
+                </form>
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-center text-small">
+            <p class="mb-1">&copy; 2018-2018 Health Track</p>
+        </footer>
+
+    </div>
+</body>
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</html>

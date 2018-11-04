@@ -1,0 +1,80 @@
+.color-site {
+    background-color: rgb(108, 155, 194);
+}
+
+.color-text {
+    color: whitesmoke;
+}
+
+.color-text2 {
+    color: green;
+}
+
+.color-text3 {
+    color: red;
+}
+
+.color-text4 {
+    color: goldenrod;
+}
+
+.imagem-1-home {
+    background-image: url(../imagens/street-workout.jpg);
+    overflow: hidden;
+    position: relative
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-dashboard {
+    background-image: url(../imagens/woman.jpg);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-dadosusuarios {
+    background-image: url(../imagens/background.jpg);
+    background-repeat: no-repeat;
+}
+
+
+.imagem-cadastro {
+    background-image: url(../imagens/man.jpg);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.centralizado {
+    margin: 100 auto !important;
+    float: none !important;
+}
+
+.centralizado2 {
+    margin: 50% !important;
+    float: auto !important;
+}
+
+.circulo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    z-index: 5;
+    background: indigo;
+    position: relative;
+}
+
+.estilo-fonte {
+    font-family: 'Courier New', Courier, monospace
+}
+
+.local {
+    height: 260px;
+}
+
+.tamanho-card {
+    width: 300px;
+}
